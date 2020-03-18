@@ -1,0 +1,7 @@
+FROM jenkins/jenkins:lts
+
+RUN addgroup --gid 1024 devgroup
+
+RUN adduser --disabled-password --gecos "" --force-badname --ingroup devgroup devuser
+
+USER devuser
